@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<title>美咲ジェネレータ</title>
+<style>
+	.color-btn{
+		display: grid;
+		grid-template-columns: repeat(8, 20px);
+		gap: 2px;
+	}
+	.color-btn input {
+		display        : none;
+	}
+	.color-btn label{
+		cursor         : pointer;
+		width          : 20px;
+		height         : 20px;
+		background     : #bdc3c7;
+		display        : inline-block;
+		box-sizing     : border-box;
+	}
+	.color-btn input[type="checkbox"]:checked + .dot-btn {
+		background     : #007fff;
+	}
+	#text0{
+		width: 300px;
+		height: 4em;
+	}
+	.btn{
+		width:60px;
+	}
+</style>
+</head>
+<body>
+<h1>美咲フォントジェネレータ</h1>
+<p>
+フォント確認
+<input class="btn" type="button" value="view" onclick="view()">
+フォント出力
+<input class="btn" type="button" value="build" onclick="build()">
+サンプル確認
+<input class="btn" type="button" value="sample" onclick="sample()">
+</p>
+<p>フォントデータの入出力※出力は上書きされます。<br>
+<textarea id="text0"></textarea>
+<p>
+<!--サンプル
+0x0000,0x7CF8,0x0488,0x0488,0x04F8,0x3C20,0x21FC,0x2124,0x3D24,0x0524,0x05FC,0x0520,0x0422,0x043E,0x0BC1,0x3001
+-->
+
+<div class="color-btn">
+<input type="checkbox" id="dot0"><label for="dot0" class="dot-btn"></label>
+<input type="checkbox" id="dot1"><label for="dot1" class="dot-btn"></label>
+<input type="checkbox" id="dot2"><label for="dot2" class="dot-btn"></label>
+<input type="checkbox" id="dot3"><label for="dot3" class="dot-btn"></label>
+<input type="checkbox" id="dot4"><label for="dot4" class="dot-btn"></label>
+<input type="checkbox" id="dot5"><label for="dot5" class="dot-btn"></label>
+<input type="checkbox" id="dot6"><label for="dot6" class="dot-btn"></label>
+<input type="checkbox" id="dot7"><label for="dot7" class="dot-btn"></label>
+<input type="checkbox" id="dot8"><label for="dot8" class="dot-btn"></label>
+<input type="checkbox" id="dot9"><label for="dot9" class="dot-btn"></label>
+<input type="checkbox" id="dot10"><label for="dot10" class="dot-btn"></label>
+<input type="checkbox" id="dot11"><label for="dot11" class="dot-btn"></label>
+<input type="checkbox" id="dot12"><label for="dot12" class="dot-btn"></label>
+<input type="checkbox" id="dot13"><label for="dot13" class="dot-btn"></label>
+<input type="checkbox" id="dot14"><label for="dot14" class="dot-btn"></label>
+<input type="checkbox" id="dot15"><label for="dot15" class="dot-btn"></label>
+
+<input type="checkbox" id="dot16"><label for="dot16" class="dot-btn"></label>
+<input type="checkbox" id="dot17"><label for="dot17" class="dot-btn"></label>
+<input type="checkbox" id="dot18"><label for="dot18" class="dot-btn"></label>
+<input type="checkbox" id="dot19"><label for="dot19" class="dot-btn"></label>
+<input type="checkbox" id="dot20"><label for="dot20" class="dot-btn"></label>
+<input type="checkbox" id="dot21"><label for="dot21" class="dot-btn"></label>
+<input type="checkbox" id="dot22"><label for="dot22" class="dot-btn"></label>
+<input type="checkbox" id="dot23"><label for="dot23" class="dot-btn"></label>
+<input type="checkbox" id="dot24"><label for="dot24" class="dot-btn"></label>
+<input type="checkbox" id="dot25"><label for="dot25" class="dot-btn"></label>
+<input type="checkbox" id="dot26"><label for="dot26" class="dot-btn"></label>
+<input type="checkbox" id="dot27"><label for="dot27" class="dot-btn"></label>
+<input type="checkbox" id="dot28"><label for="dot28" class="dot-btn"></label>
+<input type="checkbox" id="dot29"><label for="dot29" class="dot-btn"></label>
+<input type="checkbox" id="dot30"><label for="dot30" class="dot-btn"></label>
+<input type="checkbox" id="dot31"><label for="dot31" class="dot-btn"></label>
+
+<input type="checkbox" id="dot32"><label for="dot32" class="dot-btn"></label>
+<input type="checkbox" id="dot33"><label for="dot33" class="dot-btn"></label>
+<input type="checkbox" id="dot34"><label for="dot34" class="dot-btn"></label>
+<input type="checkbox" id="dot35"><label for="dot35" class="dot-btn"></label>
+<input type="checkbox" id="dot36"><label for="dot36" class="dot-btn"></label>
+<input type="checkbox" id="dot37"><label for="dot37" class="dot-btn"></label>
+<input type="checkbox" id="dot38"><label for="dot38" class="dot-btn"></label>
+<input type="checkbox" id="dot39"><label for="dot39" class="dot-btn"></label>
+<input type="checkbox" id="dot40"><label for="dot40" class="dot-btn"></label>
+<input type="checkbox" id="dot41"><label for="dot41" class="dot-btn"></label>
+<input type="checkbox" id="dot42"><label for="dot42" class="dot-btn"></label>
+<input type="checkbox" id="dot43"><label for="dot43" class="dot-btn"></label>
+<input type="checkbox" id="dot44"><label for="dot44" class="dot-btn"></label>
+<input type="checkbox" id="dot45"><label for="dot45" class="dot-btn"></label>
+<input type="checkbox" id="dot46"><label for="dot46" class="dot-btn"></label>
+<input type="checkbox" id="dot47"><label for="dot47" class="dot-btn"></label>
+
+<input type="checkbox" id="dot48"><label for="dot48" class="dot-btn"></label>
+<input type="checkbox" id="dot49"><label for="dot49" class="dot-btn"></label>
+<input type="checkbox" id="dot50"><label for="dot50" class="dot-btn"></label>
+<input type="checkbox" id="dot51"><label for="dot51" class="dot-btn"></label>
+<input type="checkbox" id="dot52"><label for="dot52" class="dot-btn"></label>
+<input type="checkbox" id="dot53"><label for="dot53" class="dot-btn"></label>
+<input type="checkbox" id="dot54"><label for="dot54" class="dot-btn"></label>
+<input type="checkbox" id="dot55"><label for="dot55" class="dot-btn"></label>
+<input type="checkbox" id="dot56"><label for="dot56" class="dot-btn"></label>
+<input type="checkbox" id="dot57"><label for="dot57" class="dot-btn"></label>
+<input type="checkbox" id="dot58"><label for="dot58" class="dot-btn"></label>
+<input type="checkbox" id="dot59"><label for="dot59" class="dot-btn"></label>
+<input type="checkbox" id="dot60"><label for="dot60" class="dot-btn"></label>
+<input type="checkbox" id="dot61"><label for="dot61" class="dot-btn"></label>
+<input type="checkbox" id="dot62"><label for="dot62" class="dot-btn"></label>
+<input type="checkbox" id="dot63"><label for="dot63" class="dot-btn"></label>
+</div>
+
+
+</body>
+<script>
+
+build();//アクセスした時に0を入れておく
+
+function build(){
+	var line = [];
+	
+	for(var i=0;i<64;i=i+8){
+		line.push(build_line(i));
+	}
+	var result = "{" + line.join(',') + "}";
+	var element = document.getElementById("text0");
+	element.value = result;
+}
+
+function view(){
+	var text0 = document.getElementById("text0").value;
+    //var line = text0.replace("0x","").replace(/[{}]/g, "").split(',');
+    var line = text0.replace(/0x|[{};]/g, "").split(',');//0xと{と}と;を削除
+    
+    for(var j=0;j<line.length;j++){
+    	var jusshin = parseInt(line[j],16);
+    	var nishin = jusshin.toString(2);
+    	nishin = zeroPadding(nishin, 8);//処理の都合で8文字に揃える
+    	
+	    for(var i=0;i<8;i++){
+	    	var element = document.getElementById(`dot${ (j*8)+i }`);
+	    	if(nishin.substr(i,1) === "1"){
+	    		element.checked = true;
+	    	}
+	    	else{
+	    		element.checked = false;
+	    	}
+	    }
+    }
+}
+
+function build_line(start){
+	var nishin = "";//blank str
+
+	for(var i=start;i<start+8;i++){
+		var element = document.getElementById(`dot${ i }`).checked;
+		
+		if(element){
+			nishin = nishin + "1";
+		}
+		else{
+			nishin = nishin + "0";
+		}
+	}
+	var jusshin = parseInt(nishin, 2);
+	var jurokushin = "0x"+ zeroPadding(jusshin.toString(16),2);//見た目重視で0埋め
+	
+	return jurokushin;
+}
+
+function sample(){
+	var text0 = "{0x20,0x52,0x7f,0x2a,0x1a,0x4a,0x30,0x00}";
+    var element = document.getElementById("text0");
+	element.value = text0;
+	view()
+}
+
+// NUM=値 LEN=桁数
+function zeroPadding(NUM, LEN){
+	return ( Array(LEN).join('0') + NUM ).slice( -LEN );
+}
+
+</script>
+</html>

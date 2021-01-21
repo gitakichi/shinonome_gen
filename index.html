@@ -3,37 +3,17 @@
 <head>
 <meta charset="utf-8" />
 <title>東雲ジェネレータ</title>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="template.js"></script>
 <style>
-	.color-btn{
-		display: grid;
-		grid-template-columns: repeat(16, 20px);
-		gap: 2px;
-	}
-	.color-btn input {
-		display        : none;
-	}
-	.color-btn label{
-		cursor         : pointer;
-		width          : 20px;
-		height         : 20px;
-		background     : #bdc3c7;
-		display        : inline-block;
-		box-sizing     : border-box;
-	}
-	.color-btn input[type="checkbox"]:checked + .dot-btn {
-		background     : #007fff;
-	}
-	#text0{
-		width: 300px;
-		height: 4em;
-	}
-	.btn{
-		width:60px;
-	}
+.color-btn{
+	grid-template-columns: repeat(16, 20px);
+}
 </style>
 </head>
 <body>
-<h1>東雲フォントジェネレータ</h1>
+<script type="text/javascript">header();</script>
+<h2>東雲フォントジェネレータ</h2>
 <p>
 フォント確認
 <input class="btn" type="button" value="view" onclick="view()">
@@ -326,7 +306,7 @@
 
 </body>
 <script>
-
+//header();
 build();//アクセスした時に0を入れておく
 
 function build(){

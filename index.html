@@ -336,23 +336,24 @@ function build(){
 		line.push(build_line(i));
 	}
 	var result = "{" + line.join(',') + "}";
-	console.log(result);
-	
 	var element = document.getElementById("text0");
 	element.value = result;
 }
 
 function view(){
 	var text0 = document.getElementById("text0").value;
-    var line = text0.slice(1,-1).split(',');
+    //var line = text0.replace("0x","").replace(/[{}]/g, "").split(',');
+    var line = text0.replace(/0x|[{};]/g, "").split(',');//0xと{と}と;を削除
     
-    for(var j=0;j<16;j++){
-    	var jusshin = parseInt(line[j].slice(2,),16);//この16進数を10進数に変換して、2進数の文字列にする
+    //zeroPaddingに似た処理で0埋めする、0を16pushして前から16取り出す
+    //line = line.push("0000000000000000").slice(16);
+    
+    for(var j=0;j<line.length;j++){
+    	var jusshin = parseInt(line[j],16);
     	var nishin = jusshin.toString(2);
-    	nishin = zeroPadding(nishin, 16);
-    	console.log(nishin);
+    	nishin = zeroPadding(nishin, 16);//処理の都合で16文字に揃える
     	
-	    for(var i=0;i<16;i++){//1文字ずつスライスして
+	    for(var i=0;i<16;i++){
 	    	var element = document.getElementById(`dot${ (j*16)+i }`);
 	    	if(nishin.substr(i,1) === "1"){
 	    		element.checked = true;
@@ -362,7 +363,6 @@ function view(){
 	    	}
 	    }
     }
-    
 }
 
 function build_line(start){
@@ -370,7 +370,6 @@ function build_line(start){
 
 	for(var i=start;i<start+16;i++){
 		var element = document.getElementById(`dot${ i }`).checked;
-		//console.log(`dot${ i }`);
 		
 		if(element){
 			nishin = nishin + "1";
@@ -380,31 +379,16 @@ function build_line(start){
 		}
 	}
 	var jusshin = parseInt(nishin, 2);
-	var jurokushin = "0x"+jusshin.toString(16);
+	var jurokushin = "0x"+ zeroPadding(jusshin.toString(16),4);//見た目重視で0埋め
 	
 	return jurokushin;
 }
 
 function sample(){
 	var text0 = "{0x0000,0x7CF8,0x0488,0x0488,0x04F8,0x3C20,0x21FC,0x2124,0x3D24,0x0524,0x05FC,0x0520,0x0422,0x043E,0x0BC1,0x3001}";
-    var line = text0.slice(1,-1).split(',');
-
-	for(var j=0;j<16;j++){
-    	var jusshin = parseInt(line[j].slice(2,),16);//この16進数を10進数に変換して、2進数の文字列にする
-    	var nishin = jusshin.toString(2);
-    	nishin = zeroPadding(nishin, 16);
-    	console.log(nishin);
-    	
-	    for(var i=0;i<16;i++){//1文字ずつスライスして
-	    	var element = document.getElementById(`dot${ (j*16)+i }`);
-	    	if(nishin.substr(i,1) === "1"){
-	    		element.checked = true;
-	    	}
-	    	else{
-	    		element.checked = false;
-	    	}
-	    }
-    }
+    var element = document.getElementById("text0");
+	element.value = text0;
+	view()
 }
 
 // NUM=値 LEN=桁数

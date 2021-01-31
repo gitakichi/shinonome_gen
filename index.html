@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <script type="text/javascript" src="template.js"></script>
+<script type="text/javascript" src="font_dict.js"></script>
 <style>
 .color-btn{
 	grid-template-columns: repeat(16, 20px);
@@ -16,6 +17,12 @@
 <div id="header"></div>
 <div id="main">
 <h2>東雲フォントジェネレータ</h2>
+
+<p>
+フォント検索
+<input type="text" id="font_chr">
+<input class="btn" type="button" value="find" onclick="find()">
+</p>
 <p>
 フォント確認
 <input class="btn" type="button" value="view" onclick="view()">
@@ -310,6 +317,18 @@
 <script>
 header();
 build();//アクセスした時に0を入れておく
+
+function find(){
+	var font_chr = document.getElementById("font_chr").value;
+	
+	//if(font_chr.length === 1){
+	if(font_dict[font_chr]){
+		var element = document.getElementById("text0");
+		element.value = font_dict[font_chr];
+		view();
+		
+	}
+}
 
 function build(){
 	var line = [];

@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 <script type="text/javascript" src="template.js"></script>
 <style>
-.color-btn{
+#color-btn{
 	grid-template-columns: repeat(8, 20px);
 }
 </style>
@@ -31,79 +31,18 @@
 0x0000,0x7CF8,0x0488,0x0488,0x04F8,0x3C20,0x21FC,0x2124,0x3D24,0x0524,0x05FC,0x0520,0x0422,0x043E,0x0BC1,0x3001
 -->
 
-<div class="color-btn">
-<input type="checkbox" id="dot0"><label for="dot0" class="dot-btn"></label>
-<input type="checkbox" id="dot1"><label for="dot1" class="dot-btn"></label>
-<input type="checkbox" id="dot2"><label for="dot2" class="dot-btn"></label>
-<input type="checkbox" id="dot3"><label for="dot3" class="dot-btn"></label>
-<input type="checkbox" id="dot4"><label for="dot4" class="dot-btn"></label>
-<input type="checkbox" id="dot5"><label for="dot5" class="dot-btn"></label>
-<input type="checkbox" id="dot6"><label for="dot6" class="dot-btn"></label>
-<input type="checkbox" id="dot7"><label for="dot7" class="dot-btn"></label>
-<input type="checkbox" id="dot8"><label for="dot8" class="dot-btn"></label>
-<input type="checkbox" id="dot9"><label for="dot9" class="dot-btn"></label>
-<input type="checkbox" id="dot10"><label for="dot10" class="dot-btn"></label>
-<input type="checkbox" id="dot11"><label for="dot11" class="dot-btn"></label>
-<input type="checkbox" id="dot12"><label for="dot12" class="dot-btn"></label>
-<input type="checkbox" id="dot13"><label for="dot13" class="dot-btn"></label>
-<input type="checkbox" id="dot14"><label for="dot14" class="dot-btn"></label>
-<input type="checkbox" id="dot15"><label for="dot15" class="dot-btn"></label>
-
-<input type="checkbox" id="dot16"><label for="dot16" class="dot-btn"></label>
-<input type="checkbox" id="dot17"><label for="dot17" class="dot-btn"></label>
-<input type="checkbox" id="dot18"><label for="dot18" class="dot-btn"></label>
-<input type="checkbox" id="dot19"><label for="dot19" class="dot-btn"></label>
-<input type="checkbox" id="dot20"><label for="dot20" class="dot-btn"></label>
-<input type="checkbox" id="dot21"><label for="dot21" class="dot-btn"></label>
-<input type="checkbox" id="dot22"><label for="dot22" class="dot-btn"></label>
-<input type="checkbox" id="dot23"><label for="dot23" class="dot-btn"></label>
-<input type="checkbox" id="dot24"><label for="dot24" class="dot-btn"></label>
-<input type="checkbox" id="dot25"><label for="dot25" class="dot-btn"></label>
-<input type="checkbox" id="dot26"><label for="dot26" class="dot-btn"></label>
-<input type="checkbox" id="dot27"><label for="dot27" class="dot-btn"></label>
-<input type="checkbox" id="dot28"><label for="dot28" class="dot-btn"></label>
-<input type="checkbox" id="dot29"><label for="dot29" class="dot-btn"></label>
-<input type="checkbox" id="dot30"><label for="dot30" class="dot-btn"></label>
-<input type="checkbox" id="dot31"><label for="dot31" class="dot-btn"></label>
-
-<input type="checkbox" id="dot32"><label for="dot32" class="dot-btn"></label>
-<input type="checkbox" id="dot33"><label for="dot33" class="dot-btn"></label>
-<input type="checkbox" id="dot34"><label for="dot34" class="dot-btn"></label>
-<input type="checkbox" id="dot35"><label for="dot35" class="dot-btn"></label>
-<input type="checkbox" id="dot36"><label for="dot36" class="dot-btn"></label>
-<input type="checkbox" id="dot37"><label for="dot37" class="dot-btn"></label>
-<input type="checkbox" id="dot38"><label for="dot38" class="dot-btn"></label>
-<input type="checkbox" id="dot39"><label for="dot39" class="dot-btn"></label>
-<input type="checkbox" id="dot40"><label for="dot40" class="dot-btn"></label>
-<input type="checkbox" id="dot41"><label for="dot41" class="dot-btn"></label>
-<input type="checkbox" id="dot42"><label for="dot42" class="dot-btn"></label>
-<input type="checkbox" id="dot43"><label for="dot43" class="dot-btn"></label>
-<input type="checkbox" id="dot44"><label for="dot44" class="dot-btn"></label>
-<input type="checkbox" id="dot45"><label for="dot45" class="dot-btn"></label>
-<input type="checkbox" id="dot46"><label for="dot46" class="dot-btn"></label>
-<input type="checkbox" id="dot47"><label for="dot47" class="dot-btn"></label>
-
-<input type="checkbox" id="dot48"><label for="dot48" class="dot-btn"></label>
-<input type="checkbox" id="dot49"><label for="dot49" class="dot-btn"></label>
-<input type="checkbox" id="dot50"><label for="dot50" class="dot-btn"></label>
-<input type="checkbox" id="dot51"><label for="dot51" class="dot-btn"></label>
-<input type="checkbox" id="dot52"><label for="dot52" class="dot-btn"></label>
-<input type="checkbox" id="dot53"><label for="dot53" class="dot-btn"></label>
-<input type="checkbox" id="dot54"><label for="dot54" class="dot-btn"></label>
-<input type="checkbox" id="dot55"><label for="dot55" class="dot-btn"></label>
-<input type="checkbox" id="dot56"><label for="dot56" class="dot-btn"></label>
-<input type="checkbox" id="dot57"><label for="dot57" class="dot-btn"></label>
-<input type="checkbox" id="dot58"><label for="dot58" class="dot-btn"></label>
-<input type="checkbox" id="dot59"><label for="dot59" class="dot-btn"></label>
-<input type="checkbox" id="dot60"><label for="dot60" class="dot-btn"></label>
-<input type="checkbox" id="dot61"><label for="dot61" class="dot-btn"></label>
-<input type="checkbox" id="dot62"><label for="dot62" class="dot-btn"></label>
-<input type="checkbox" id="dot63"><label for="dot63" class="dot-btn"></label>
-</div>
+<div id="color-btn"></div>
 </div>
 
 </body>
 <script>
+var element = document.getElementById("color-btn");
+var html_text = ""
+for(var i=0;i<64;i++){
+	html_text += `<input type="checkbox" id="dot${i}"><label for="dot${i}" class="dot-btn"></label>\n`;
+}
+element.innerHTML = html_text;
+
 header();
 build();//アクセスした時に0を入れておく
 

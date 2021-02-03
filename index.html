@@ -8,7 +8,7 @@
 <script type="text/javascript" src="template.js"></script>
 <script type="text/javascript" src="font_dict.js"></script>
 <style>
-.color-btn{
+#color-btn{
 	grid-template-columns: repeat(16, 20px);
 }
 </style>
@@ -34,287 +34,23 @@
 <p>フォントデータの入出力※出力は上書きされます。<br>
 <textarea id="text0"></textarea>
 <p>
-<!--サンプル
-0x0000,0x7CF8,0x0488,0x0488,0x04F8,0x3C20,0x21FC,0x2124,0x3D24,0x0524,0x05FC,0x0520,0x0422,0x043E,0x0BC1,0x3001
--->
 
-<div class="color-btn">
+<div id="color-btn">
+<!--
 <input type="checkbox" id="dot0"><label for="dot0" class="dot-btn"></label>
-<input type="checkbox" id="dot1"><label for="dot1" class="dot-btn"></label>
-<input type="checkbox" id="dot2"><label for="dot2" class="dot-btn"></label>
-<input type="checkbox" id="dot3"><label for="dot3" class="dot-btn"></label>
-<input type="checkbox" id="dot4"><label for="dot4" class="dot-btn"></label>
-<input type="checkbox" id="dot5"><label for="dot5" class="dot-btn"></label>
-<input type="checkbox" id="dot6"><label for="dot6" class="dot-btn"></label>
-<input type="checkbox" id="dot7"><label for="dot7" class="dot-btn"></label>
-<input type="checkbox" id="dot8"><label for="dot8" class="dot-btn"></label>
-<input type="checkbox" id="dot9"><label for="dot9" class="dot-btn"></label>
-<input type="checkbox" id="dot10"><label for="dot10" class="dot-btn"></label>
-<input type="checkbox" id="dot11"><label for="dot11" class="dot-btn"></label>
-<input type="checkbox" id="dot12"><label for="dot12" class="dot-btn"></label>
-<input type="checkbox" id="dot13"><label for="dot13" class="dot-btn"></label>
-<input type="checkbox" id="dot14"><label for="dot14" class="dot-btn"></label>
-<input type="checkbox" id="dot15"><label for="dot15" class="dot-btn"></label>
-
-<input type="checkbox" id="dot16"><label for="dot16" class="dot-btn"></label>
-<input type="checkbox" id="dot17"><label for="dot17" class="dot-btn"></label>
-<input type="checkbox" id="dot18"><label for="dot18" class="dot-btn"></label>
-<input type="checkbox" id="dot19"><label for="dot19" class="dot-btn"></label>
-<input type="checkbox" id="dot20"><label for="dot20" class="dot-btn"></label>
-<input type="checkbox" id="dot21"><label for="dot21" class="dot-btn"></label>
-<input type="checkbox" id="dot22"><label for="dot22" class="dot-btn"></label>
-<input type="checkbox" id="dot23"><label for="dot23" class="dot-btn"></label>
-<input type="checkbox" id="dot24"><label for="dot24" class="dot-btn"></label>
-<input type="checkbox" id="dot25"><label for="dot25" class="dot-btn"></label>
-<input type="checkbox" id="dot26"><label for="dot26" class="dot-btn"></label>
-<input type="checkbox" id="dot27"><label for="dot27" class="dot-btn"></label>
-<input type="checkbox" id="dot28"><label for="dot28" class="dot-btn"></label>
-<input type="checkbox" id="dot29"><label for="dot29" class="dot-btn"></label>
-<input type="checkbox" id="dot30"><label for="dot30" class="dot-btn"></label>
-<input type="checkbox" id="dot31"><label for="dot31" class="dot-btn"></label>
-
-<input type="checkbox" id="dot32"><label for="dot32" class="dot-btn"></label>
-<input type="checkbox" id="dot33"><label for="dot33" class="dot-btn"></label>
-<input type="checkbox" id="dot34"><label for="dot34" class="dot-btn"></label>
-<input type="checkbox" id="dot35"><label for="dot35" class="dot-btn"></label>
-<input type="checkbox" id="dot36"><label for="dot36" class="dot-btn"></label>
-<input type="checkbox" id="dot37"><label for="dot37" class="dot-btn"></label>
-<input type="checkbox" id="dot38"><label for="dot38" class="dot-btn"></label>
-<input type="checkbox" id="dot39"><label for="dot39" class="dot-btn"></label>
-<input type="checkbox" id="dot40"><label for="dot40" class="dot-btn"></label>
-<input type="checkbox" id="dot41"><label for="dot41" class="dot-btn"></label>
-<input type="checkbox" id="dot42"><label for="dot42" class="dot-btn"></label>
-<input type="checkbox" id="dot43"><label for="dot43" class="dot-btn"></label>
-<input type="checkbox" id="dot44"><label for="dot44" class="dot-btn"></label>
-<input type="checkbox" id="dot45"><label for="dot45" class="dot-btn"></label>
-<input type="checkbox" id="dot46"><label for="dot46" class="dot-btn"></label>
-<input type="checkbox" id="dot47"><label for="dot47" class="dot-btn"></label>
-
-<input type="checkbox" id="dot48"><label for="dot48" class="dot-btn"></label>
-<input type="checkbox" id="dot49"><label for="dot49" class="dot-btn"></label>
-<input type="checkbox" id="dot50"><label for="dot50" class="dot-btn"></label>
-<input type="checkbox" id="dot51"><label for="dot51" class="dot-btn"></label>
-<input type="checkbox" id="dot52"><label for="dot52" class="dot-btn"></label>
-<input type="checkbox" id="dot53"><label for="dot53" class="dot-btn"></label>
-<input type="checkbox" id="dot54"><label for="dot54" class="dot-btn"></label>
-<input type="checkbox" id="dot55"><label for="dot55" class="dot-btn"></label>
-<input type="checkbox" id="dot56"><label for="dot56" class="dot-btn"></label>
-<input type="checkbox" id="dot57"><label for="dot57" class="dot-btn"></label>
-<input type="checkbox" id="dot58"><label for="dot58" class="dot-btn"></label>
-<input type="checkbox" id="dot59"><label for="dot59" class="dot-btn"></label>
-<input type="checkbox" id="dot60"><label for="dot60" class="dot-btn"></label>
-<input type="checkbox" id="dot61"><label for="dot61" class="dot-btn"></label>
-<input type="checkbox" id="dot62"><label for="dot62" class="dot-btn"></label>
-<input type="checkbox" id="dot63"><label for="dot63" class="dot-btn"></label>
-
-<input type="checkbox" id="dot64"><label for="dot64" class="dot-btn"></label>
-<input type="checkbox" id="dot65"><label for="dot65" class="dot-btn"></label>
-<input type="checkbox" id="dot66"><label for="dot66" class="dot-btn"></label>
-<input type="checkbox" id="dot67"><label for="dot67" class="dot-btn"></label>
-<input type="checkbox" id="dot68"><label for="dot68" class="dot-btn"></label>
-<input type="checkbox" id="dot69"><label for="dot69" class="dot-btn"></label>
-<input type="checkbox" id="dot70"><label for="dot70" class="dot-btn"></label>
-<input type="checkbox" id="dot71"><label for="dot71" class="dot-btn"></label>
-<input type="checkbox" id="dot72"><label for="dot72" class="dot-btn"></label>
-<input type="checkbox" id="dot73"><label for="dot73" class="dot-btn"></label>
-<input type="checkbox" id="dot74"><label for="dot74" class="dot-btn"></label>
-<input type="checkbox" id="dot75"><label for="dot75" class="dot-btn"></label>
-<input type="checkbox" id="dot76"><label for="dot76" class="dot-btn"></label>
-<input type="checkbox" id="dot77"><label for="dot77" class="dot-btn"></label>
-<input type="checkbox" id="dot78"><label for="dot78" class="dot-btn"></label>
-<input type="checkbox" id="dot79"><label for="dot79" class="dot-btn"></label>
-
-<input type="checkbox" id="dot80"><label for="dot80" class="dot-btn"></label>
-<input type="checkbox" id="dot81"><label for="dot81" class="dot-btn"></label>
-<input type="checkbox" id="dot82"><label for="dot82" class="dot-btn"></label>
-<input type="checkbox" id="dot83"><label for="dot83" class="dot-btn"></label>
-<input type="checkbox" id="dot84"><label for="dot84" class="dot-btn"></label>
-<input type="checkbox" id="dot85"><label for="dot85" class="dot-btn"></label>
-<input type="checkbox" id="dot86"><label for="dot86" class="dot-btn"></label>
-<input type="checkbox" id="dot87"><label for="dot87" class="dot-btn"></label>
-<input type="checkbox" id="dot88"><label for="dot88" class="dot-btn"></label>
-<input type="checkbox" id="dot89"><label for="dot89" class="dot-btn"></label>
-<input type="checkbox" id="dot90"><label for="dot90" class="dot-btn"></label>
-<input type="checkbox" id="dot91"><label for="dot91" class="dot-btn"></label>
-<input type="checkbox" id="dot92"><label for="dot92" class="dot-btn"></label>
-<input type="checkbox" id="dot93"><label for="dot93" class="dot-btn"></label>
-<input type="checkbox" id="dot94"><label for="dot94" class="dot-btn"></label>
-<input type="checkbox" id="dot95"><label for="dot95" class="dot-btn"></label>
-
-<input type="checkbox" id="dot96"><label for="dot96" class="dot-btn"></label>
-<input type="checkbox" id="dot97"><label for="dot97" class="dot-btn"></label>
-<input type="checkbox" id="dot98"><label for="dot98" class="dot-btn"></label>
-<input type="checkbox" id="dot99"><label for="dot99" class="dot-btn"></label>
-<input type="checkbox" id="dot100"><label for="dot100" class="dot-btn"></label>
-<input type="checkbox" id="dot101"><label for="dot101" class="dot-btn"></label>
-<input type="checkbox" id="dot102"><label for="dot102" class="dot-btn"></label>
-<input type="checkbox" id="dot103"><label for="dot103" class="dot-btn"></label>
-<input type="checkbox" id="dot104"><label for="dot104" class="dot-btn"></label>
-<input type="checkbox" id="dot105"><label for="dot105" class="dot-btn"></label>
-<input type="checkbox" id="dot106"><label for="dot106" class="dot-btn"></label>
-<input type="checkbox" id="dot107"><label for="dot107" class="dot-btn"></label>
-<input type="checkbox" id="dot108"><label for="dot108" class="dot-btn"></label>
-<input type="checkbox" id="dot109"><label for="dot109" class="dot-btn"></label>
-<input type="checkbox" id="dot110"><label for="dot110" class="dot-btn"></label>
-<input type="checkbox" id="dot111"><label for="dot111" class="dot-btn"></label>
-
-<input type="checkbox" id="dot112"><label for="dot112" class="dot-btn"></label>
-<input type="checkbox" id="dot113"><label for="dot113" class="dot-btn"></label>
-<input type="checkbox" id="dot114"><label for="dot114" class="dot-btn"></label>
-<input type="checkbox" id="dot115"><label for="dot115" class="dot-btn"></label>
-<input type="checkbox" id="dot116"><label for="dot116" class="dot-btn"></label>
-<input type="checkbox" id="dot117"><label for="dot117" class="dot-btn"></label>
-<input type="checkbox" id="dot118"><label for="dot118" class="dot-btn"></label>
-<input type="checkbox" id="dot119"><label for="dot119" class="dot-btn"></label>
-<input type="checkbox" id="dot120"><label for="dot120" class="dot-btn"></label>
-<input type="checkbox" id="dot121"><label for="dot121" class="dot-btn"></label>
-<input type="checkbox" id="dot122"><label for="dot122" class="dot-btn"></label>
-<input type="checkbox" id="dot123"><label for="dot123" class="dot-btn"></label>
-<input type="checkbox" id="dot124"><label for="dot124" class="dot-btn"></label>
-<input type="checkbox" id="dot125"><label for="dot125" class="dot-btn"></label>
-<input type="checkbox" id="dot126"><label for="dot126" class="dot-btn"></label>
-<input type="checkbox" id="dot127"><label for="dot127" class="dot-btn"></label>
-
-<input type="checkbox" id="dot128"><label for="dot128" class="dot-btn"></label>
-<input type="checkbox" id="dot129"><label for="dot129" class="dot-btn"></label>
-<input type="checkbox" id="dot130"><label for="dot130" class="dot-btn"></label>
-<input type="checkbox" id="dot131"><label for="dot131" class="dot-btn"></label>
-<input type="checkbox" id="dot132"><label for="dot132" class="dot-btn"></label>
-<input type="checkbox" id="dot133"><label for="dot133" class="dot-btn"></label>
-<input type="checkbox" id="dot134"><label for="dot134" class="dot-btn"></label>
-<input type="checkbox" id="dot135"><label for="dot135" class="dot-btn"></label>
-<input type="checkbox" id="dot136"><label for="dot136" class="dot-btn"></label>
-<input type="checkbox" id="dot137"><label for="dot137" class="dot-btn"></label>
-<input type="checkbox" id="dot138"><label for="dot138" class="dot-btn"></label>
-<input type="checkbox" id="dot139"><label for="dot139" class="dot-btn"></label>
-<input type="checkbox" id="dot140"><label for="dot140" class="dot-btn"></label>
-<input type="checkbox" id="dot141"><label for="dot141" class="dot-btn"></label>
-<input type="checkbox" id="dot142"><label for="dot142" class="dot-btn"></label>
-<input type="checkbox" id="dot143"><label for="dot143" class="dot-btn"></label>
-
-<input type="checkbox" id="dot144"><label for="dot144" class="dot-btn"></label>
-<input type="checkbox" id="dot145"><label for="dot145" class="dot-btn"></label>
-<input type="checkbox" id="dot146"><label for="dot146" class="dot-btn"></label>
-<input type="checkbox" id="dot147"><label for="dot147" class="dot-btn"></label>
-<input type="checkbox" id="dot148"><label for="dot148" class="dot-btn"></label>
-<input type="checkbox" id="dot149"><label for="dot149" class="dot-btn"></label>
-<input type="checkbox" id="dot150"><label for="dot150" class="dot-btn"></label>
-<input type="checkbox" id="dot151"><label for="dot151" class="dot-btn"></label>
-<input type="checkbox" id="dot152"><label for="dot152" class="dot-btn"></label>
-<input type="checkbox" id="dot153"><label for="dot153" class="dot-btn"></label>
-<input type="checkbox" id="dot154"><label for="dot154" class="dot-btn"></label>
-<input type="checkbox" id="dot155"><label for="dot155" class="dot-btn"></label>
-<input type="checkbox" id="dot156"><label for="dot156" class="dot-btn"></label>
-<input type="checkbox" id="dot157"><label for="dot157" class="dot-btn"></label>
-<input type="checkbox" id="dot158"><label for="dot158" class="dot-btn"></label>
-<input type="checkbox" id="dot159"><label for="dot159" class="dot-btn"></label>
-
-<input type="checkbox" id="dot160"><label for="dot160" class="dot-btn"></label>
-<input type="checkbox" id="dot161"><label for="dot161" class="dot-btn"></label>
-<input type="checkbox" id="dot162"><label for="dot162" class="dot-btn"></label>
-<input type="checkbox" id="dot163"><label for="dot163" class="dot-btn"></label>
-<input type="checkbox" id="dot164"><label for="dot164" class="dot-btn"></label>
-<input type="checkbox" id="dot165"><label for="dot165" class="dot-btn"></label>
-<input type="checkbox" id="dot166"><label for="dot166" class="dot-btn"></label>
-<input type="checkbox" id="dot167"><label for="dot167" class="dot-btn"></label>
-<input type="checkbox" id="dot168"><label for="dot168" class="dot-btn"></label>
-<input type="checkbox" id="dot169"><label for="dot169" class="dot-btn"></label>
-<input type="checkbox" id="dot170"><label for="dot170" class="dot-btn"></label>
-<input type="checkbox" id="dot171"><label for="dot171" class="dot-btn"></label>
-<input type="checkbox" id="dot172"><label for="dot172" class="dot-btn"></label>
-<input type="checkbox" id="dot173"><label for="dot173" class="dot-btn"></label>
-<input type="checkbox" id="dot174"><label for="dot174" class="dot-btn"></label>
-<input type="checkbox" id="dot175"><label for="dot175" class="dot-btn"></label>
-
-<input type="checkbox" id="dot176"><label for="dot176" class="dot-btn"></label>
-<input type="checkbox" id="dot177"><label for="dot177" class="dot-btn"></label>
-<input type="checkbox" id="dot178"><label for="dot178" class="dot-btn"></label>
-<input type="checkbox" id="dot179"><label for="dot179" class="dot-btn"></label>
-<input type="checkbox" id="dot180"><label for="dot180" class="dot-btn"></label>
-<input type="checkbox" id="dot181"><label for="dot181" class="dot-btn"></label>
-<input type="checkbox" id="dot182"><label for="dot182" class="dot-btn"></label>
-<input type="checkbox" id="dot183"><label for="dot183" class="dot-btn"></label>
-<input type="checkbox" id="dot184"><label for="dot184" class="dot-btn"></label>
-<input type="checkbox" id="dot185"><label for="dot185" class="dot-btn"></label>
-<input type="checkbox" id="dot186"><label for="dot186" class="dot-btn"></label>
-<input type="checkbox" id="dot187"><label for="dot187" class="dot-btn"></label>
-<input type="checkbox" id="dot188"><label for="dot188" class="dot-btn"></label>
-<input type="checkbox" id="dot189"><label for="dot189" class="dot-btn"></label>
-<input type="checkbox" id="dot190"><label for="dot190" class="dot-btn"></label>
-<input type="checkbox" id="dot191"><label for="dot191" class="dot-btn"></label>
-
-<input type="checkbox" id="dot192"><label for="dot192" class="dot-btn"></label>
-<input type="checkbox" id="dot193"><label for="dot193" class="dot-btn"></label>
-<input type="checkbox" id="dot194"><label for="dot194" class="dot-btn"></label>
-<input type="checkbox" id="dot195"><label for="dot195" class="dot-btn"></label>
-<input type="checkbox" id="dot196"><label for="dot196" class="dot-btn"></label>
-<input type="checkbox" id="dot197"><label for="dot197" class="dot-btn"></label>
-<input type="checkbox" id="dot198"><label for="dot198" class="dot-btn"></label>
-<input type="checkbox" id="dot199"><label for="dot199" class="dot-btn"></label>
-<input type="checkbox" id="dot200"><label for="dot200" class="dot-btn"></label>
-<input type="checkbox" id="dot201"><label for="dot201" class="dot-btn"></label>
-<input type="checkbox" id="dot202"><label for="dot202" class="dot-btn"></label>
-<input type="checkbox" id="dot203"><label for="dot203" class="dot-btn"></label>
-<input type="checkbox" id="dot204"><label for="dot204" class="dot-btn"></label>
-<input type="checkbox" id="dot205"><label for="dot205" class="dot-btn"></label>
-<input type="checkbox" id="dot206"><label for="dot206" class="dot-btn"></label>
-<input type="checkbox" id="dot207"><label for="dot207" class="dot-btn"></label>
-
-<input type="checkbox" id="dot208"><label for="dot208" class="dot-btn"></label>
-<input type="checkbox" id="dot209"><label for="dot209" class="dot-btn"></label>
-<input type="checkbox" id="dot210"><label for="dot210" class="dot-btn"></label>
-<input type="checkbox" id="dot211"><label for="dot211" class="dot-btn"></label>
-<input type="checkbox" id="dot212"><label for="dot212" class="dot-btn"></label>
-<input type="checkbox" id="dot213"><label for="dot213" class="dot-btn"></label>
-<input type="checkbox" id="dot214"><label for="dot214" class="dot-btn"></label>
-<input type="checkbox" id="dot215"><label for="dot215" class="dot-btn"></label>
-<input type="checkbox" id="dot216"><label for="dot216" class="dot-btn"></label>
-<input type="checkbox" id="dot217"><label for="dot217" class="dot-btn"></label>
-<input type="checkbox" id="dot218"><label for="dot218" class="dot-btn"></label>
-<input type="checkbox" id="dot219"><label for="dot219" class="dot-btn"></label>
-<input type="checkbox" id="dot220"><label for="dot220" class="dot-btn"></label>
-<input type="checkbox" id="dot221"><label for="dot221" class="dot-btn"></label>
-<input type="checkbox" id="dot222"><label for="dot222" class="dot-btn"></label>
-<input type="checkbox" id="dot223"><label for="dot223" class="dot-btn"></label>
-
-<input type="checkbox" id="dot224"><label for="dot224" class="dot-btn"></label>
-<input type="checkbox" id="dot225"><label for="dot225" class="dot-btn"></label>
-<input type="checkbox" id="dot226"><label for="dot226" class="dot-btn"></label>
-<input type="checkbox" id="dot227"><label for="dot227" class="dot-btn"></label>
-<input type="checkbox" id="dot228"><label for="dot228" class="dot-btn"></label>
-<input type="checkbox" id="dot229"><label for="dot229" class="dot-btn"></label>
-<input type="checkbox" id="dot230"><label for="dot230" class="dot-btn"></label>
-<input type="checkbox" id="dot231"><label for="dot231" class="dot-btn"></label>
-<input type="checkbox" id="dot232"><label for="dot232" class="dot-btn"></label>
-<input type="checkbox" id="dot233"><label for="dot233" class="dot-btn"></label>
-<input type="checkbox" id="dot234"><label for="dot234" class="dot-btn"></label>
-<input type="checkbox" id="dot235"><label for="dot235" class="dot-btn"></label>
-<input type="checkbox" id="dot236"><label for="dot236" class="dot-btn"></label>
-<input type="checkbox" id="dot237"><label for="dot237" class="dot-btn"></label>
-<input type="checkbox" id="dot238"><label for="dot238" class="dot-btn"></label>
-<input type="checkbox" id="dot239"><label for="dot239" class="dot-btn"></label>
-
-<input type="checkbox" id="dot240"><label for="dot240" class="dot-btn"></label>
-<input type="checkbox" id="dot241"><label for="dot241" class="dot-btn"></label>
-<input type="checkbox" id="dot242"><label for="dot242" class="dot-btn"></label>
-<input type="checkbox" id="dot243"><label for="dot243" class="dot-btn"></label>
-<input type="checkbox" id="dot244"><label for="dot244" class="dot-btn"></label>
-<input type="checkbox" id="dot245"><label for="dot245" class="dot-btn"></label>
-<input type="checkbox" id="dot246"><label for="dot246" class="dot-btn"></label>
-<input type="checkbox" id="dot247"><label for="dot247" class="dot-btn"></label>
-<input type="checkbox" id="dot248"><label for="dot248" class="dot-btn"></label>
-<input type="checkbox" id="dot249"><label for="dot249" class="dot-btn"></label>
-<input type="checkbox" id="dot250"><label for="dot250" class="dot-btn"></label>
-<input type="checkbox" id="dot251"><label for="dot251" class="dot-btn"></label>
-<input type="checkbox" id="dot252"><label for="dot252" class="dot-btn"></label>
-<input type="checkbox" id="dot253"><label for="dot253" class="dot-btn"></label>
-<input type="checkbox" id="dot254"><label for="dot254" class="dot-btn"></label>
-<input type="checkbox" id="dot255"><label for="dot255" class="dot-btn"></label>
+-->
 </div>
 </div>
 
 </body>
 <script>
+var element = document.getElementById("color-btn");
+var html_text = ""
+for(var i=0;i<256;i++){
+	html_text += `<input type="checkbox" id="dot${i}"><label for="dot${i}" class="dot-btn"></label>\n`;
+}
+element.innerHTML = html_text;
+
 header();
 build();//アクセスした時に0を入れておく
 

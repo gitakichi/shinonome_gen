@@ -62,7 +62,7 @@ function view(){
     //var line = text0.replace("0x","").replace(/[{}]/g, "").split(',');
     var line = text0.replace(/0x|[{};]/g, "").split(',');//0xと{と}と;を削除
     
-    for(var j=0;j<line.length;j++){
+    for(var j=0;j<line.length && j<8;j++){
     	var jusshin = parseInt(line[j],16);
     	var nishin = jusshin.toString(2);
     	nishin = zeroPadding(nishin, 8);//処理の都合で8文字に揃える

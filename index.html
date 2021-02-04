@@ -85,7 +85,7 @@ function view(){
     //zeroPaddingに似た処理で0埋めする、0を16pushして前から16取り出す
     //line = line.push("0000000000000000").slice(16);
     
-    for(var j=0;j<line.length;j++){
+    for(var j=0;j<line.length && j<16;j++){
     	var jusshin = parseInt(line[j],16);
     	var nishin = jusshin.toString(2);
     	nishin = zeroPadding(nishin, 16);//処理の都合で16文字に揃える
